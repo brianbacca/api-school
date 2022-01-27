@@ -1,7 +1,9 @@
 class UserController {
-  constructor(){}
-  sayHello(req,res){
-    return res.json({msg:"Hello world!"})
+  constructor({ UserService }) {
+    this._userServices = UserService;
+  }
+  sayHello(req, res) {
+    return res.json({ msg: "Hello world!" });
   }
 }
 
