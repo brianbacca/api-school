@@ -1,5 +1,8 @@
-// const dotenv =require("dotenv");
-// dotenv.config();
-const { PORT } = require("./config/environments/");
+const container = require("./api/container");
 
-console.log(PORT);
+const application = container.resolve("app");
+
+application.start().catch((err) => {
+  console.log(err);
+  process.exit();
+});

@@ -1,6 +1,7 @@
-const { Router } = require("expresss");
+const { Router } = require("express");
 
-module.export = function ({ UserController }) {
+
+module.exports = function ({ UserController }) {
   const router = Router();
   router.get("/", UserController.sayHello);
   return router;
